@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body,html {
+    height: 100%;
+}
+
+main {
+    background: url("../img/background-home-mobile.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.header {
+    padding: 2rem;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.ham:hover .lists {
+    display: block;
+    background: white;
+    right: 35%;
+    left: 0;
+    /*top: 8%;*/
+    padding: 1rem;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.ham:hover .lists li a {
+    color: black;
+}
+
+.ham:hover .lists {
+    /*margin-top: 2rem;*/
+}
+
+.lists {
+    /*background: black;*/
+    display: none;
+    height: 100%;
+    position: absolute;
+    gap: 1rem;
+}
+
+.lists li {
+    margin-top: 1rem;
+    list-style: circle;
+}
+
+.lists li a {
+    font-size: 20px;
+    color: white;
+}
+
+.lists-none {
+    display: none;
+}
+
+/* REAL */
+.real {
+    width: 100%;
+    margin: 1rem auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+.left {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.left .p1 {
+    font-size: 20px;
+    color: white;
+    -webkit-text-stroke: 1px grey;
+}
+
+.left .p2 {
+    font-family: "Iowan Old Style", sans-serif;
+    color: white;
+    font-size: 100px;
+}
+
+.p3 {
+    color: white;
+    -webkit-text-stroke: 1px grey;
+    font-size: 20px;
+}
+
+.right {
+    /*margin: auto;*/
+}
+
+.right .background {
+    height:20px;
+    padding: 3rem;
+    width:20px;
+    background:white;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+
+@media all and (min-width: 1440px) {
+
+
+    main {
+        background: url("../img/background-home-desktop.jpg") no-repeat;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        font-family: monospace;
+    }
+
+
+    .ham{
+        display: none;
+    }
+.lists-none {
+    display: flex;
+    gap: 2rem;
+}
+
+.lists-none li a {
+    font-size: 20px;
+    color: white;
+}
+
+.lists-none li:first-child {
+    border-bottom:2px solid white;
+}
+
+    /* REAL */
+    .real {
+        margin-top: 20rem;
+    }
+
+}
