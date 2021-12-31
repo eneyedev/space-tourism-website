@@ -13,26 +13,26 @@ html {
 }
 
 main {
-  background: url("img/background-home-mobile.jpg") no-repeat;
+  background: url("img/background-destination-mobile.jpg") no-repeat;
   height: 100%;
   width: 100%;
   background-size: cover;
   font-family: Arial, sans-serif;
 }
 
-.logo {
-  width: 2rem;
-}
-
 .secret-holder {
-  padding: 2rem;
+  padding: 1rem;
   align-items: center;
   display: flex;
   width: 100%;
   /*max-width: 50%;*/
-  /*max-width: 90%;*/
+  max-width: 95%;
   margin: auto;
   justify-content: space-between;
+}
+
+.logo {
+  width: 2rem;
 }
 
 .ham:hover .lists {
@@ -83,10 +83,15 @@ main {
   display: none;
 }
 
+.empty-holder {
+  display: none;
+}
+
 /* REAL */
 .real {
   width: 100%;
-  margin: auto;
+  margin: 1rem auto;
+  bottom: 50rem;
   max-width: 90%;
   text-align: center;
 }
@@ -96,48 +101,120 @@ main {
   /*margin-bottom: 2rem;*/
 }
 
-.left .p1 {
+.p1 {
   font-size: 20px;
-  color: white;
+  color: grey;
+  font-family: sans-serif;
   -webkit-text-stroke: 1px grey;
+  /*margin-bottom: 1rem;*/
 }
 
-.left .p2 {
-  font-family: "Iowan Old Style", sans-serif;
+.p2 {
+  font-size: 80px;
   color: white;
-  font-size: 100px;
+  font-family: initial;
 }
 
 .p3 {
+  font-size: 20px;
   color: white;
   -webkit-text-stroke: 1px grey;
-  font-size: 20px;
-  /*font-size: 14px;*/
+  margin-bottom: 1rem;
+}
+
+.p4 {
+  color: white;
+  font-size: 30px;
+  margin-top: 0.5rem;
+  font-family: inherit;
+}
+
+.grey {
+  color: grey;
+}
+
+.p4BIG {
+  color: white;
+  font-size: 25px;
+  margin-top: 0.5rem;
+  font-family: inherit;
+}
+
+.left img {
+  width: 70%;
 }
 
 .right {
-  background: white;
   width: 100%;
-  max-width: 10rem;
+  /*max-width: 10rem;*/
   /* text-align: center; */
-  padding: 2rem;
   /*margin: 5rem auto;*/
-  margin: 5rem auto;
+  /*margin: 2rem auto;*/
+  margin-top: 2rem;
   border-radius: 50rem;
   height: 10rem;
 }
 
-.background {
-  line-height: 6rem;
+.top {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  gap: 2rem;
+  width: 100%;
 }
 
-.empty-holder {
+.list-checked {
+  background: white;
+  display: block;
+  height: 0.2rem;
+  border-radius: 10rem;
+  margin-top: 1rem;
+  /*margin-left: 0.1rem;*/
+  /*width: 10.4rem;*/
+}
+.list-checked-rest {
+  background: white;
+  height: 0.2rem;
+  margin-top: 1rem;
   display: none;
+}
+
+.top li:hover .list-checked-rest {
+  display: block;
+}
+
+.text {
+  margin-top: 2rem;
+}
+
+.calculation {
+  margin-top: 3rem;
+}
+
+.line {
+  background: #4e6477;
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  opacity: 0.3;
+}
+
+.time {
+  margin-top: 2rem;
+  display: flex;
+  /*margin-bottom: 10rem;*/
+  justify-content: space-between;
+}
+
+.average-distance,
+.month {
+  text-align: left;
 }
 
 @media all and (min-width: 1440px) {
   main {
-    background: url("img/background-home-desktop.jpg") no-repeat;
+    background: url("img/background-destination-desktop.jpg") no-repeat;
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -171,7 +248,7 @@ main {
     width: 100%;
     max-width: 60%;
     padding: 2rem;
-    margin-right: -3rem;
+    margin-right: -5rem;
     /*background: rgb(69, 87, 115);*/
     /*background: #4e6477;*/
     background: rgba(255, 255, 255, 0.2);
@@ -180,7 +257,7 @@ main {
 
   .lists-none {
     display: flex;
-    top: -4.7rem;
+    top: -3.7rem;
     margin-right: 22.5rem;
     float: right;
     position: inherit;
@@ -198,21 +275,21 @@ main {
     height: 0.2rem;
     margin-top: 1rem;
     margin-left: 0.1rem;
-    width: 5.4rem;
+    width: 10.4rem;
   }
 
   .no2 {
     width: 5.4rem;
   }
 
-  .destination-underline {
+  .home-underline {
     background: white;
     height: 0.2rem;
     display: none;
     margin-top: 1rem;
   }
 
-  .lists-none li:nth-child(2):hover .destination-underline {
+  .lists-none li:nth-child(2):hover .home-underline {
     display: block;
   }
 
@@ -256,17 +333,23 @@ main {
     display: flex;
     width: 100%;
     max-width: 82%;
+    gap: 1rem;
     justify-content: space-between;
     text-align: left;
+    height: 60%;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 
   .left {
     text-align: initial;
-    margin-bottom: 6rem;
     width: 100%;
     max-width: 40rem;
+  }
+
+  .left img {
+    margin: auto;
+    display: block;
   }
 
   .background {
@@ -275,6 +358,17 @@ main {
   }
 
   .right {
+    height: auto;
     margin-right: 10rem;
+  }
+
+  .top {
+    justify-content: normal;
+  }
+
+  .desktop-center {
+    text-align: center;
+    /*margin-top: -5rem;*/
+    margin-bottom: 5rem;
   }
 }
